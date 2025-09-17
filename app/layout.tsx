@@ -16,11 +16,14 @@ const fontMono = FontMono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Kruger Virtual Assistant",
-    template: `%s - Kruger Virtual Assistant`,
+    default: "Kruger Virtual Assistant Demo",
+    template: `%s - Kruger Virtual Assistant Demo`,
   },
+  description:
+    "Interactive avatar demo featuring Kora, Kruger's virtual assistant for plant visitors.",
   icons: {
-    icon: "/Kruger-logo.png",
+    icon: "/kruger-logo.png",
+    shortcut: "/kruger-logo.png",
   },
 };
 

@@ -2,41 +2,29 @@
 
 ![Kruger Virtual Assistant Demo Screenshot](./public/demo.png)
 
-This is a sample project and was bootstrapped using [NextJS](https://nextjs.org/).
-Feel free to play around with the existing code and please leave any feedback for the SDK [here](https://github.com/HeyGen-Official/StreamingAvatarSDK/discussions).
+This project is a Next.js implementation of HeyGen's Streaming Avatar SDK tailored for Kruger. It boots straight into Kora, Kruger's virtual receptionist, so you can demonstrate a branded welcome experience for visitors and stakeholders.
 
-## Getting Started
+## Getting started
 
-### Setting up the demo
+1. **Clone the repository** and move into the folder.
+2. **Install dependencies** with `npm install` (or `pnpm install` / `yarn install`).
+3. **Create a `.env` file** and add your HeyGen Enterprise API key as `HEYGEN_API_KEY`. The key powers the API route that mints secure access tokens for the avatar session.
+4. _(Optional)_ Provide an OpenAI API key if you plan to experiment with the OpenAI integrations.
+5. **Run the dev server** with `npm run dev` and open [http://localhost:3000](http://localhost:3000).
 
-1. Clone this repo
+## Kruger-specific branding
 
-2. Navigate to the repo folder in your terminal
+- Global metadata (title, favicon) is defined in [`app/layout.tsx`](./app/layout.tsx).
+- The navigation bar, including logo usage and outbound links, lives in [`components/NavBar.tsx`](./components/NavBar.tsx).
+- The logo image is expected at `public/kruger-logo.png`; place your preferred Kruger mark there.
 
-3. Run `npm install` (assuming you have npm installed. If not, please follow these instructions: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/)
+## Customising Kora's persona
 
-4. Enter your HeyGen Enterprise API Token in the `.env` file. Replace `HEYGEN_API_KEY` with your API key. This will allow the Client app to generate secure Access Tokens with which to create interactive sessions.
+Kora's onboarding script is stored in the `DEFAULT_KNOWLEDGE_BASE` string inside [`components/InteractiveAvatar.tsx`](./components/InteractiveAvatar.tsx). The configuration drawer also exposes the same text so you can tweak the prompt live without touching code. Update either location to adjust the tone or details shared with visitors.
 
-   You can retrieve either the API Key by logging in to HeyGen and navigating to this page in your settings: [https://app.heygen.com/settings?from=&nav=Subscriptions%20%26%20API]. 
+## Helpful references
 
-5. (Optional) If you would like to use the OpenAI features, enter your OpenAI Api Key in the `.env` file.
+- Kruger corporate site: [https://www.kruger.com/en/](https://www.kruger.com/en/)
+- HeyGen Streaming Avatar documentation: [https://docs.heygen.com/interactive-avatar](https://docs.heygen.com/interactive-avatar)
 
-6. Run `npm run dev`
-
-### Starting sessions
-
-NOTE: Make sure you have enter your token into the `.env` file and run `npm run dev`.
-
-To start your 'session' with a Interactive Avatar, first click the 'start' button. If your HeyGen API key is entered into the Server's .env file, then you should see our demo Interactive Avatar appear.
-
-If you want to see a different Avatar or try a different voice, you can close the session and enter the IDs and then 'start' the session again. Please see below for information on where to retrieve different Avatar and voice IDs that you can use.
-
-### Which Avatars can I use with this project?
-
-By default, there are several Public Avatars that can be used in Interactive Avatar. (AKA Interactive Avatars.) You can find the Avatar IDs for these Public Avatars by navigating to [labs.heygen.com/interactive-avatar](https://labs.heygen.com/interactive-avatar) and clicking 'Select Avatar' and copying the avatar id.
-
-You can create your own custom Interactive Avatars at labs.heygen.com/interactive-avatar by clicking 'create interactive avatar' on the top-left of the screen.
-
-### Where can I read more about enterprise-level usage of the Interactive Avatar API?
-
-Please read our Interactive Avatar 101 article for more information on pricing: https://help.heygen.com/en/articles/9182113-interactive-avatar-101-your-ultimate-guide
+Feel free to adapt the UI, styling, or copy to match the exact Kruger deployment scenario you're demonstrating.

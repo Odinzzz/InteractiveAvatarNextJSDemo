@@ -1,5 +1,5 @@
-export function HeyGenLogo() {
-  return <img alt="Kruger Logo" className="h-8" src="/Kruger-logo.png" />;
+export function KrugerLogo() {
+  return <img alt="Kruger Logo" className="h-8" src="/kruger-logo.png" />;
 }
 
 type IconSvgProps = {

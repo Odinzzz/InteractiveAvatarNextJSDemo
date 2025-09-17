@@ -1,56 +1,49 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 
-import { GithubIcon, HeyGenLogo } from "./Icons";
+import { KrugerLogo } from "./Icons";
 
 export default function NavBar() {
   return (
     <>
       <div className="flex flex-row justify-between items-center w-[1000px] m-auto p-6">
         <div className="flex flex-row items-center gap-4">
-          <Link href="https://app.heygen.com/" target="_blank">
-            <HeyGenLogo />
+          <Link href="https://www.kruger.com/en/" target="_blank">
+            <KrugerLogo />
           </Link>
           <div className="bg-gradient-to-br from-emerald-300 to-lime-400 bg-clip-text">
             <p className="text-xl font-semibold text-transparent">
-              Kruger Virtual Assistant
+              Kruger Virtual Assistant Demo
             </p>
           </div>
         </div>
         <div className="flex flex-row items-center gap-6">
-          <Link
-            href="https://labs.heygen.com/interactive-avatar"
-            target="_blank"
-          >
-            Avatars
+          <Link href="https://www.kruger.com/en/company/" target="_blank">
+            Company
+          </Link>
+          <Link href="https://www.kruger.com/en/our-values/" target="_blank">
+            Values
           </Link>
           <Link
-            href="https://docs.heygen.com/reference/list-voices-v2"
+            href="https://www.kruger.com/en/our-business-sectors/"
             target="_blank"
           >
-            Voices
+            Divisions
           </Link>
           <Link
-            href="https://docs.heygen.com/reference/new-session-copy"
+            href="https://www.kruger.com/en/sustainability/"
             target="_blank"
           >
-            API Docs
+            Sustainability
           </Link>
           <Link
-            href="https://help.heygen.com/en/articles/9182113-interactive-avatar-101-your-ultimate-guide"
+            aria-label="Contact Kruger"
+            className="text-foreground"
+            href="https://www.kruger.com/en/contact-us/"
             target="_blank"
           >
-            Guide
-          </Link>
-          <Link
-            aria-label="Github"
-            className="flex flex-row justify-center gap-1 text-foreground"
-            href="https://github.com/HeyGen-Official/StreamingAvatarSDK"
-            target="_blank"
-          >
-            <GithubIcon className="text-default-500" />
-            SDK
+            Contact
           </Link>
         </div>
       </div>

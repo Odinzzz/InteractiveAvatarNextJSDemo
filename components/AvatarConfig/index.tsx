@@ -69,6 +69,22 @@ export const AvatarConfig: React.FC<AvatarConfigProps> = ({
           onChange={(event) => onChange("knowledgeBase", event.target.value)}
         />
       </Field>
+      <Field label="Custom Knowledge Base">
+        <textarea
+          className="w-full text-white text-sm bg-zinc-700 py-2 px-6 rounded-lg outline-none min-h-[300px]"
+          placeholder="Enter custom knowledge base content"
+          value={config.knowledgeBase || ""}
+          onChange={(event) => onChange("knowledgeBase", event.target.value)}
+        />
+      </Field>
+      <Field label="Custom Knowledge Base">
+        <textarea
+          className="w-full text-white text-sm bg-zinc-700 py-2 px-6 rounded-lg outline-none min-h-[300px]"
+          placeholder="Enter custom knowledge base content"
+          value={config.knowledgeBase || ""}
+          onChange={(event) => onChange("knowledgeBase", event.target.value)}
+        />
+      </Field>
       <Field label="Avatar ID">
         <Select
           isSelected={(option) =>
