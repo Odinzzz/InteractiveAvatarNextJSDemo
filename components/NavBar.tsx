@@ -12,9 +12,9 @@ export default function NavBar() {
           <Link href="https://app.heygen.com/" target="_blank">
             <HeyGenLogo />
           </Link>
-          <div className="bg-gradient-to-br from-sky-300 to-indigo-500 bg-clip-text">
+          <div className="bg-gradient-to-br from-emerald-300 to-lime-400 bg-clip-text">
             <p className="text-xl font-semibold text-transparent">
-              HeyGen Interactive Avatar SDK NextJS Demo
+              Kruger Virtual Assistant
             </p>
           </div>
         </div>
